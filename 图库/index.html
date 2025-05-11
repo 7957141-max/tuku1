@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>萝卜头图库 - 专业设计资源导航</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>萝卜头图库</h1>
+                <p class="slogan">精选优质设计资源导航</p>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="搜索资源...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <button id="contact-btn" class="contact-btn">
+                    <i class="fas fa-qrcode"></i> 联系作者
+                </button>
+            </div>
+        </header>
+        
+        <div class="categories-wrapper">
+            <div class="categories">
+                <div class="category" data-category="emoji">
+                    <div class="category-icon"><i class="far fa-smile"></i></div>
+                    <div class="category-name">Emoji表情</div>
+                </div>
+                <div class="category" data-category="dynamic">
+                    <div class="category-icon"><i class="fas fa-images"></i></div>
+                    <div class="category-name">动态图片</div>
+                </div>
+                <div class="category" data-category="wallpaper">
+                    <div class="category-icon"><i class="far fa-image"></i></div>
+                    <div class="category-name">高清壁纸</div>
+                </div>
+                <div class="category" data-category="psd">
+                    <div class="category-icon"><i class="fas fa-object-group"></i></div>
+                    <div class="category-name">PSD素材</div>
+                </div>
+                <div class="category" data-category="imgbed">
+                    <div class="category-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <div class="category-name">图床工具</div>
+                </div>
+                <div class="category" data-category="material">
+                    <div class="category-icon"><i class="fas fa-palette"></i></div>
+                    <div class="category-name">素材纹理</div>
+                </div>
+                <div class="category" data-category="png">
+                    <div class="category-icon"><i class="far fa-file-image"></i></div>
+                    <div class="category-name">PNG素材</div>
+                </div>
+                <div class="category" data-category="photography">
+                    <div class="category-icon"><i class="fas fa-camera"></i></div>
+                    <div class="category-name">摄影资源</div>
+                </div>
+                <div class="category" data-category="icon">
+                    <div class="category-icon"><i class="fas fa-icons"></i></div>
+                    <div class="category-name">图标资源</div>
+                </div>
+                <div class="category" data-category="illustration">
+                    <div class="category-icon"><i class="fas fa-paint-brush"></i></div>
+                    <div class="category-name">插图素材</div>
+                </div>
+                <div class="category" data-category="stockphoto">
+                    <div class="category-icon"><i class="fas fa-photo-video"></i></div>
+                    <div class="category-name">图片素材</div>
+                </div>
+            </div>
+        </div>
+        
+        <main id="site-list">
+            <div class="category-title" id="current-category">
+                <i class="far fa-smile"></i> Emoji表情
+            </div>
+            
+            <div class="site-grid" id="emoji-sites">
+                <!-- Emoji图库站点将在这里动态加载 -->
+            </div>
+            
+            <div class="site-grid" id="dynamic-sites" style="display: none;">
+                <!-- 动态图库站点将在这里动态加载 -->
+            </div>
+            
+            <div class="site-grid" id="wallpaper-sites" style="display: none;">
+                <!-- 壁纸图库站点将在这里动态加载 -->
+            </div>
+            
+            <div class="site-grid" id="psd-sites" style="display: none;">
+                <!-- PSD图库站点将在这里动态加载 -->
+            </div>
+            
+            <div class="site-grid" id="imgbed-sites" style="display: none;">
+                <!-- 图床站点将在这里动态加载 -->
+            </div>
+            
+            <div class="site-grid" id="material-sites" style="display: none;">
+                <!-- 素材纹理站点将在这里动态加载 -->
+            </div>
+            
+            <div class="site-grid" id="png-sites" style="display: none;">
+                <!-- PNG素材站点将在这里动态加载 -->
+            </div>
+            
+            <div class="site-grid" id="photography-sites" style="display: none;">
+                <!-- 摄影站点将在这里动态加载 -->
+            </div>
+            
+            <div class="site-grid" id="icon-sites" style="display: none;">
+                <!-- 图标站点将在这里动态加载 -->
+            </div>
+
+            <div class="site-grid" id="illustration-sites" style="display: none;">
+                <!-- 插图素材站点将在这里动态加载 -->
+            </div>
+
+            <div class="site-grid" id="stockphoto-sites" style="display: none;">
+                <!-- 图片素材站点将在这里动态加载 -->
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <p>© 2025 萝卜头图库 - 精选优质设计资源导航</p>
+                <div class="footer-links">
+                    <a href="#about">关于我们</a>
+                    <a href="#feedback">意见反馈</a>
+                    <a href="#" id="footer-contact">联系我们</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- 二维码弹窗 -->
+    <div id="qrcode-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>扫码联系作者</h2>
+            <div class="qrcode-container">
+                <img src="images/my-qrcode.png.jpg" alt="联系二维码" class="qrcode-image">
+                <p class="qrcode-text">扫一扫上面的二维码图案，加我为朋友。</p>
+                <p class="qrcode-info">呆呆丢了呆呆<br>云南 昆明</p>
+                <div class="contact-options">
+                    <a href="https://u.wechat.com/MLE9EGkSP0ThCN4tgiP0YsA?s=2" class="wechat-link" target="_blank">
+                        <i class="fab fa-weixin"></i> 打开微信链接
+                    </a>
+                    <a href="contact.html" class="page-link" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> 在新窗口中查看
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
